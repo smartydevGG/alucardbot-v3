@@ -274,6 +274,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
                 return
+        elif query.data == "help":
+            buttons = [
+                [
+                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
+                ]
+                ]
+            await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+
+        elif query.data == "about":
+            buttons = [
+                [
+                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
+                ]
+                ]
+            await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+
 
         elif query.data.startswith("pr0fess0r_99"):
             ident, file_id = query.data.split("#")
@@ -290,6 +306,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{files.file_name}"
+                buttons = [
+                    [
+                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                    ]
+                    ]
                 
                 await query.answer()
                 await client.send_cached_media(
@@ -316,7 +337,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{title}"
-             
+                buttons = [
+                    [
+                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                    ]
+                    ]
                 
                 await query.answer()
                 await client.send_cached_media(
