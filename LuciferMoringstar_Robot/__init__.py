@@ -28,9 +28,12 @@ Bot Owner Only
 """
 
 ABOUT = """
-➥ Name :  Alucard
+
+https://telegra.ph/file/0ea65c0b04d687107df46.jpg
+
+Name :  Alucard
     
-➥ Creator : [Smxrtyboi](https://t.me/Madhav_Smxrty)
+Creator : [HellSing Organisation](@Madhav_Smxrty)
 
 ➥ Language : Python3
 
